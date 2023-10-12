@@ -15,8 +15,8 @@ const Navbar = () => {
             <Logo width={100} height={100} />
 
             <div className={styles.menu}>
-              {menus.map((menu) => (
-                <Link href={menu.link}>{menu.title}</Link>
+              {menus.map((menu, index) => (
+                <Link href={menu.link} key={index}>{menu.title}</Link>
               ))}
             </div>
 
