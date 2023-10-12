@@ -1,0 +1,82 @@
+.job{
+    /* background-color: var(--primary); */
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background: #000;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: 3px;
+    padding: 20px;
+    position: relative;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding: 10px;
+}
+
+.lable{
+    color: gray;
+}
+
+.name{
+    font-size: 30px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.package{
+    color: tomato;
+}
+
+.package, .location, .km, .by{
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.date{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    color: rgb(5, 111, 5);
+    background-color: rgb(158, 255, 195);
+}
+
+.side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 0 0 0;
+}
+
+.checkbox>input{
+    height: 17px;
+    width: 17px;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+

@@ -1,0 +1,22 @@
+.button{
+    min-width: 100px;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 15px;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+
+}
+
+.outlineButton{
+    min-width: 100px;
+    padding: 15px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: transparent;
+    font-size: 15px;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+}

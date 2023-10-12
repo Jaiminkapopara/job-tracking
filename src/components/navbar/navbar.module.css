@@ -1,0 +1,32 @@
+.navbar{
+    /* background-color: yellowgreen; */
+    padding: 0 20px;
+}
+
+.menus{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+    font-size: 20px;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+@media screen and (max-width:750px) {
+    .menu{
+        display: none;
+    }
+}
