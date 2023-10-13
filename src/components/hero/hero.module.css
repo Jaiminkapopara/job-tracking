@@ -18,12 +18,18 @@
 
 .title {
     font-size: 70px;
-    text-align: center;
-    
+    text-align: center; 
 }
 
 .subtitle {
     font-size: 20px;
     font-weight: 200;
     text-align: center;
+}
+
+
+@media screen and (max-width:700px){
+    .title {
+        font-size: 45px;
+    }
 }

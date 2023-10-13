@@ -1,5 +1,30 @@
+.form{
+    min-height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 50px 0; */
+}
+
+.form input{
+    background: transparent;
+    height: 25px;
+    border: 0;
+    border-bottom: 1px solid rgb(115, 115, 115);
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.form input[type=date]{
+    color: black;
+}
+
+
 .job{
     /* background-color: var(--primary); */
+    width: 50%;
     border: 1px solid white;
     border-radius: 10px;
     overflow: hidden;
@@ -58,8 +83,8 @@
 
 .date{
     position: absolute;
-    right: 0px;
-    top: -204px;
+    right: 30px;
+    top: 30px;
     padding: 5px;
     border-radius: 10px;
     color: rgb(5, 111, 5);
@@ -94,3 +119,13 @@
 
 
 
+
+
+@media screen and (max-width:700px){
+    .form{
+        height: 55vh;
+    }
+    .job{
+        width: 100%;
+    }
+}

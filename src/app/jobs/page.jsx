@@ -6,7 +6,7 @@ import Jobs from "@/components/jobs/Jobs";
 const page = () => {
   const jobs = [
     {
-      name: "google",
+      name: "Jaiminkapopara/job-tracking",
       src: "https://images.pexels.com/photos/15395510/pexels-photo-15395510/free-photo-of-google-spelled-on-letter-cubes.jpeg?auto=compress&cs=tinysrgb&w=600",
       package: "50000-90000",
       duration: '1',
