@@ -15,36 +15,45 @@ const Job = ({ job }) => {
             <div className={styles.name}>{job.name}</div>
 
             <div>
-              <div className={styles.lable}>Package :</div>
-              <div className={styles.package}>{job.package} Rs.</div>
+              <span className={styles.lable}>Package :</span>
+              <span className={styles.package}>{job.package} Rs.</span>
+            </div>
+
+              <div>
+                <span className={styles.lable}>duration :</span>
+                <span className={styles.location}>{job.duration} months</span>
+              </div>
+
+            <div>
+              <span className={styles.lable}>location :</span>
+              <span className={styles.location}>{job.location}</span>
             </div>
 
             <div>
-              <div className={styles.lable}>location :</div>
-              <div className={styles.location}>{job.location}</div>
+              <span className={styles.lable}>km :</span>
+              <span className={styles.km}>{job.km} km</span>
             </div>
 
             <div>
-              <div className={styles.lable}>km :</div>
-              <div className={styles.km}>{job.km} km</div>
-            </div>
-
-            <div>
-              <div className={styles.lable}>by :</div>
-              <div className={styles.by}>{job.by}</div>
+              <span className={styles.lable}>by :</span>
+              <span className={styles.by}>{job.by}</span>
             </div>
 
             <div className={styles.date}>{job.date}</div>
           </div>
 
           <div className={styles.checkbox}>
+                <input type="checkbox" />
+                <div className={styles.lable}>Bond</div>
+              </div>
+          <div className={styles.checkbox}>
             <input type="checkbox" />
             <div className={styles.lable}>Rejected</div>
           </div>
 
           <div className={styles.buttons}>
-            <Button text={'Edit'}/>
-            <Button text={'Delete'} outline={true} />
+            <Button text={"Edit"} />
+            <Button text={"Delete"} outline={true} />
           </div>
         </div>
       </div>

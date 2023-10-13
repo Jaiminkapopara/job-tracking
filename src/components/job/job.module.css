@@ -10,11 +10,17 @@
 
 .card{
     background: #000;
+    width: 100%;
     border: 1px solid white;
     border-radius: 8px;
     margin: 3px;
     padding: 20px;
     position: relative;
+}
+
+.image{
+    width: 100%;
+    overflow: hidden;
 }
 
 .data{
@@ -40,8 +46,14 @@
 }
 
 .package, .location, .km, .by{
-    padding-left: 20px;
+    padding-left: 10px;
     font-size: 18px;
+}
+
+.bond{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .date{
@@ -64,7 +76,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 30px 0 0 0;
+    padding: 10px 0 0 10px;
 }
 
 .checkbox>input{
@@ -76,7 +88,9 @@
     display: flex;
     gap: 10px;
     position: absolute;
-    right: 20px;
+    right: 30px;
     bottom: 20px;
 }
+
+
 
