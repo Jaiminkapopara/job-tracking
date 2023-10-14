@@ -4,25 +4,26 @@ import Img from "../image/Img";
 import Button from "../button/Button";
 
 const Job = ({ job }) => {
+  // console.log(job);
   return (
     <>
       <div className={styles.job}>
         <div className={styles.card}>
           <div className={styles.image}>
-            <Img src={job.src} width={400} height={200} />
+            <Img src={job.image} width={400} height={200} />
           </div>
           <div className={styles.data}>
-            <div className={styles.name}>{job.name}</div>
+            <div className={styles.name}>{job.company}</div>
 
             <div>
               <span className={styles.lable}>Package :</span>
-              <span className={styles.package}>{job.package} Rs.</span>
+              <span className={styles.package}>{job.packages} Rs.</span>
             </div>
 
-              <div>
-                <span className={styles.lable}>duration :</span>
-                <span className={styles.location}>{job.duration} months</span>
-              </div>
+            <div>
+              <span className={styles.lable}>duration :</span>
+              <span className={styles.location}>{job.duration} months</span>
+            </div>
 
             <div>
               <span className={styles.lable}>location :</span>
@@ -43,9 +44,13 @@ const Job = ({ job }) => {
           </div>
 
           <div className={styles.checkbox}>
-                <input type="checkbox" />
-                <div className={styles.lable}>Bond</div>
-              </div>
+            <input type="checkbox" />
+            <div className={styles.lable}>Bond</div>
+          </div>
+          <div className={styles.checkbox}>
+            <input type="checkbox" />
+            <div className={styles.lable}>inteview</div>
+          </div>
           <div className={styles.checkbox}>
             <input type="checkbox" />
             <div className={styles.lable}>Rejected</div>
