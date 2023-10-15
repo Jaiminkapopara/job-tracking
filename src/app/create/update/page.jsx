@@ -7,7 +7,7 @@ import Form from "@/components/form/Form";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 
-const page = ({ job }) => {
+const Page = ({ job }) => {
 
   const session = useSession()
   const id = useSearchParams().get('id')
@@ -81,4 +81,4 @@ const page = ({ job }) => {
   );
 };
 
-export default page;
+export default Page;

@@ -7,7 +7,7 @@ import Jobs from "@/components/jobs/Jobs";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   // const jobs = [
   //   {
   //     name: "Jaiminkapopara/job-tracking",
@@ -97,4 +97,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

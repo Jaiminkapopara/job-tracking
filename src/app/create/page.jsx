@@ -7,7 +7,7 @@ import Form from "@/components/form/Form";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-const page = ({ job }) => {
+const Page = ({ job }) => {
   const router = useRouter();
 
   const session = useSession();
@@ -74,4 +74,4 @@ const page = ({ job }) => {
   }
 };
 
-export default page;
+export default Page;
