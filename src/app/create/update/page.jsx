@@ -65,7 +65,7 @@ const page = ({ job }) => {
   }
 
   if(session?.status !== 'authenticated'){
-    return router?.push('/auth/login')
+    return router?.push('/')
   }
 
   return (

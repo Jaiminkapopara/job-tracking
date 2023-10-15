@@ -5,6 +5,7 @@ import styles from "./jobs.module.css";
 import Container from "@/components/container/Container";
 import Jobs from "@/components/jobs/Jobs";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const page = () => {
   // const jobs = [
@@ -58,6 +59,7 @@ const page = () => {
 
   const session = useSession()
   const [jobs, setJobs] = useState([]);
+  const router = useRouter()
   const currentCreator = session?.data?.user?.email
 
   useEffect(() => {
@@ -76,8 +78,12 @@ const page = () => {
     getJobs()
   }, []);
 
-  console.log(jobs);
+  // console.log(jobs);
   const filteredJobs = jobs.filter((job ) => (job.creator === currentCreator))
+
+  if (session?.status === "unauthenticated") {
+    return router?.push("/");
+  }
 
   return (
     <>

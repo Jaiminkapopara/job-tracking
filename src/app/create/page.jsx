@@ -49,14 +49,14 @@ const page = ({ job }) => {
       });
 
       e.target.reset();
-      // router.push("/");
+      router.push("/");
     } catch (error) {
       console.log(error);
     }
   };
 
   if (session?.status === "unauthenticated") {
-    return router?.push("/auth/login");
+    return router?.push("/");
   }
 
   if (session?.status === "authenticated") {
