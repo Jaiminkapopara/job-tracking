@@ -34,9 +34,7 @@ const Form = ({ data, setData, handleSubmit }) => {
                 <span className={styles.lable}>Package :</span>
                 <span className={styles.package}>
                   <input
-                    required
                     value={data?.packages}
-                    type="number"
                     onChange={(e) =>
                       setData({ ...data, packages: e.target.value })
                     }
@@ -49,9 +47,7 @@ const Form = ({ data, setData, handleSubmit }) => {
                 <span className={styles.lable}>duration :</span>
                 <span className={styles.location}>
                   <input
-                    required
                     value={data?.duration}
-                    type="number"
                     onChange={(e) =>
                       setData({ ...data, duration: e.target.value })
                     }
@@ -110,7 +106,7 @@ const Form = ({ data, setData, handleSubmit }) => {
               <input
                 checked={data?.bond}
                 type="checkbox"
-                onChange={(e) => setData({ ...data, bond: e.target.value })}
+                onChange={(e) => setData({ ...data, bond: e.target.checked })}
               />
               <div className={styles.lable}>Bond</div>
             </div>
@@ -119,7 +115,7 @@ const Form = ({ data, setData, handleSubmit }) => {
                 checked={data?.interview}
                 type="checkbox"
                 onChange={(e) =>
-                  setData({ ...data, interview: e.target.value })
+                  setData({ ...data, interview: e.target.checked })
                 }
               />
               <div className={styles.lable}>inteview</div>
@@ -128,7 +124,7 @@ const Form = ({ data, setData, handleSubmit }) => {
               <input
                 checked={data?.rejected}
                 type="checkbox"
-                onChange={(e) => setData({ ...data, rejected: e.target.value })}
+                onChange={(e) => setData({ ...data, rejected: e.target.checked })}
               />
               <div className={styles.lable}>Rejected</div>
             </div>

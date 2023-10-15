@@ -19,11 +19,12 @@ export const POST = async (req, res) => {
     await connDb()
 
     try{
-        const { creator, image, company, packages, duration, location, km, by, bond, interview, rejected } = await req.json()
+        const { creator, date, image, company, packages, duration, location, km, by, bond, interview, rejected } = await req.json()
 
         const newJob = await Create.create({
             creator,
             image,
+            date,
             company,
             packages,
             duration,

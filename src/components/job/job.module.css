@@ -8,6 +8,18 @@
     justify-content: center;
 }
 
+.rejected{
+    background: #4e2828a9;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: 3px;
+    padding: 20px;
+    position: relative;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .card{
     background: #000;
     width: 100%;
@@ -59,7 +71,7 @@
 .date{
     position: absolute;
     right: 0px;
-    top: -204px;
+    top: -100px;
     padding: 5px;
     border-radius: 10px;
     color: rgb(5, 111, 5);

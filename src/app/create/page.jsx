@@ -49,7 +49,7 @@ const page = ({ job }) => {
       });
 
       e.target.reset();
-      router.push("/");
+      // router.push("/");
     } catch (error) {
       console.log(error);
     }

@@ -2,15 +2,34 @@ import React from "react";
 import styles from "./job.module.css";
 import Img from "../image/Img";
 import Button from "../button/Button";
+import { useRouter } from "next/navigation";
 
 const Job = ({ job }) => {
   // console.log(job);
+
+  const router = useRouter()
+
+  const handleEdit = () => {
+    router.push(`/create/update?id=${job._id}`)
+  }
+
+  const handleDelete = async() => {
+    try{
+      await fetch(`api/form/${job._id}`, {
+        method: 'DELETE'
+      })
+      router.push('/')
+    }catch(error){
+      console.log(error);
+    }
+  }
+
   return (
     <>
       <div className={styles.job}>
-        <div className={styles.card}>
+        <div className={job.rejected ? styles.rejected : styles.card}>
           <div className={styles.image}>
-            <Img src={job.image} width={400} height={200} />
+            <Img src={job.image} width={378} height={100} />
           </div>
           <div className={styles.data}>
             <div className={styles.name}>{job.company}</div>
@@ -40,25 +59,25 @@ const Job = ({ job }) => {
               <span className={styles.by}>{job.by}</span>
             </div>
 
-            <div className={styles.date}>{job.date}</div>
+            {job.date && <div className={styles.date}>{job.date}</div>}
           </div>
 
           <div className={styles.checkbox}>
-            <input type="checkbox" />
+            <input type="checkbox" checked={job.bond} />
             <div className={styles.lable}>Bond</div>
           </div>
           <div className={styles.checkbox}>
-            <input type="checkbox" />
+            <input type="checkbox" checked={job.interview} />
             <div className={styles.lable}>inteview</div>
           </div>
           <div className={styles.checkbox}>
-            <input type="checkbox" />
+            <input type="checkbox" checked={job.rejected} />
             <div className={styles.lable}>Rejected</div>
           </div>
 
           <div className={styles.buttons}>
-            <Button text={"Edit"} />
-            <Button text={"Delete"} outline={true} />
+            <Button text={"Edit"} handler={handleEdit}/>
+            <Button text={"Delete"} outline={true} handler={handleDelete}/>
           </div>
         </div>
       </div>

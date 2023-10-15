@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./jobs.module.css";
 import Container from "@/components/container/Container";
 import Jobs from "@/components/jobs/Jobs";
+import { useSession } from "next-auth/react";
 
 const page = () => {
   // const jobs = [
@@ -55,7 +56,9 @@ const page = () => {
   //   },
   // ];
 
+  const session = useSession()
   const [jobs, setJobs] = useState([]);
+  const currentCreator = session?.data?.user?.email
 
   useEffect(() => {
     const getJobs = async () => {
@@ -73,12 +76,15 @@ const page = () => {
     getJobs()
   }, []);
 
+  console.log(jobs);
+  const filteredJobs = jobs.filter((job ) => (job.creator === currentCreator))
+
   return (
     <>
       <div className={styles.jobs}>
         <Container>
           <h1>Your Selected Companies</h1>
-          <Jobs jobs={jobs} />
+          <Jobs jobs={filteredJobs} />
         </Container>
       </div>
     </>

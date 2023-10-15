@@ -14,7 +14,7 @@ const CreateSchema = new mongoose.Schema({
         require: true
     },
     packages: {
-        type: Number,
+        type: String,
         require: true
     },
     duration: {
@@ -32,6 +32,9 @@ const CreateSchema = new mongoose.Schema({
     by: {
         type: String,
         require: true
+    },
+    date: {
+        type: String,
     },
     bond: {
         type: Boolean,
